@@ -1,0 +1,6 @@
+colorama==0.3.9
+Flask==1.0.2
+Flask-GraphQL==2.0.0
+graphene-sqlalchemy==2.1.0
+requests==2.19.1
+SQLAlchemy==1.2.10
