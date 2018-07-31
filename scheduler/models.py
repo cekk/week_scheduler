@@ -1,5 +1,5 @@
 # flask_sqlalchemy/models.py
-from sqlalchemy import *
+from sqlalchemy import Column, Integer, String
 from .db import Base
 
 

@@ -1,9 +1,9 @@
 SHELL := /usr/bin/env bash
 
 .PHONY: bootstrap
-bootstrap: 
+bootstrap:
 	./.bootstrap.sh
-	init_db
+	make init_db
 
 .PHONY: develop
 develop:

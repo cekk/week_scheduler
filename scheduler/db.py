@@ -21,12 +21,14 @@ Base.query = db_session.query_property()
 def close_db(e=None):
     db_session.remove()
 
+
 @click.command('init-db')
 @with_appcontext
 def init_db_command():
     """Clear the existing data and create new tables."""
     from .models import Ticket
     Base.metadata.create_all(bind=engine)
+
 
 @click.command('clean-db')
 @with_appcontext
