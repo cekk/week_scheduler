@@ -27,6 +27,7 @@ def close_db(e=None):
 def init_db_command():
     """Clear the existing data and create new tables."""
     from .models import Ticket
+    from .models import User
     Base.metadata.create_all(bind=engine)
 
 
@@ -34,6 +35,8 @@ def init_db_command():
 @with_appcontext
 def clean_db_command():
     for table in engine.table_names():
+        if table == 'users':
+            continue
         click.secho(
             'Clear table {0}'.format(table),
             fg='yellow'

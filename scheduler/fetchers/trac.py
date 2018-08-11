@@ -22,7 +22,10 @@ def add_or_update_ticket(ticket, project):
             title=ticket.get('summary'),
             status=ticket.get('status'),
             owner=ticket.get('owner'),
-            project=project
+            project=project,
+            created_date=ticket.get('time'),
+            modified_date=ticket.get('changetime'),
+            priority=ticket.get('priority_value')
         )
         db_session.add(new_ticket)
     else:
@@ -61,7 +64,7 @@ def generate_server(infos):
         netloc=parsed_url.netloc,
         path=parsed_url.path
     )
-    return xmlrpc_client.ServerProxy(xmlrpc_url)
+    return xmlrpc_client.ServerProxy(xmlrpc_url, use_builtin_types=True)
 
 
 def fetch_tickets(app):

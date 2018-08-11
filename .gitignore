@@ -27,3 +27,4 @@ output.xml
 *.swp
 pip-selfcheck.json
 *.sqlite3
+.env

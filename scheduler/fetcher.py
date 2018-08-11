@@ -14,7 +14,7 @@ def fetch_tickets_command():
     """
     app = _app_ctx_stack.top.app
     click.echo('Start fetching tickets.')
-    fetch_redmine_tickets(app)
+    # fetch_redmine_tickets(app)
     fetch_trac_tickets(app)
 
 

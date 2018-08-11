@@ -1,6 +1,12 @@
+click==6.7
 colorama==0.3.9
 Flask==1.0.2
+Flask-Cors==3.0.6
 Flask-GraphQL==2.0.0
+Flask-JWT-Extended==3.12.1
 graphene-sqlalchemy==2.1.0
+Jinja2==2.10
+python-dotenv==0.9.1
 requests==2.19.1
 SQLAlchemy==1.2.10
+SQLAlchemy-Utils==0.33.3
